@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# 🚀 User Directory Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **User Directory Dashboard** built with React and TypeScript.
+This project demonstrates clean architecture, optimized performance, and a polished user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Demo
 
-## React Compiler
+👉 https://buyer-foresight-wheat.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 GitHub Repository
 
-## Expanding the ESLint configuration
+👉 https://github.com/Devendradev44/BuyerForesight
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📌 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* 📊 Display users in a structured dashboard (Name, Email, Phone, Company)
+* 🔍 Search users by name or email (with **debouncing**)
+* ↕️ Sort users by Name and Company (ascending/descending)
+* 🧠 Highlight matched search results
+* 📄 User detail page with full information
+* 🔄 Client-side filtering and sorting
+* ⏳ Loading skeleton for better UX
+* ❌ Empty state handling
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ React (Vite)
+* 🟦 TypeScript
+* 🎨 Tailwind CSS
+* 🔀 React Router
+* 🌐 Axios
+
+---
+
+## 🧠 Key Implementation Highlights
+
+* **Custom Hook (****`useUsers`****)**
+  Handles API logic separately for better reusability and cleaner code.
+
+* **Debounced Search**
+  Optimizes performance by reducing unnecessary filtering operations.
+
+* **Separation of Concerns**
+  Structured into API, hooks, components, pages, and utilities.
+
+* **Reusable Components**
+  Modular and scalable UI design.
+
+---
+
+## 📂 Folder Structure
+
+```
+src/
+├── api/
+├── components/
+├── hooks/
+├── pages/
+├── types/
+├── utils/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Setup Instructions
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone repository
+git clone https://github.com/Devendradev44/BuyerForesight
+
+# Navigate into project
+cd BuyerForesight
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
 ```
+
+---
+
+## 📈 Future Improvements
+
+* Pagination for large datasets
+* Dark mode support
+* API caching (React Query)
+* Unit and integration testing
+
+---
+
+## 👨‍💻 Author
+
+**Devendra Pujari**
+
+---
+
+## 💡 Notes
+
+This project was built as part of a frontend assessment, with additional enhancements beyond basic requirements to demonstrate production-level practices.
